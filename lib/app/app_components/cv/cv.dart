@@ -1,1 +1,0 @@
-export 'package:simple_cv/app/app_components/cv/cv_page.dart';

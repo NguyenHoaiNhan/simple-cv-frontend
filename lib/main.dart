@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'app/app_components/cv/cv.dart';
+import 'package:simple_cv/app/cv/cv_view.dart';
 
 void main() {
   runApp(
     const MaterialApp(
-      home: Scaffold(
-        body: CVPage(),
-      ),
+      debugShowCheckedModeBanner: false,
+      home: CVView(),
     ),
   );
 }

@@ -1,1 +1,0 @@
-export 'package:simple_cv/app/app_components/left_side/left_side_page.dart';
