@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:simple_cv/app/base_widgets/text_button_with_icon.dart';
 import 'package:simple_cv/app/base_widgets/text_field.dart';
-import '../../config/app_color.dart';
+import '../../config/ui_values.dart';
 import 'action_button.dart';
 import 'level_slider.dart';
 

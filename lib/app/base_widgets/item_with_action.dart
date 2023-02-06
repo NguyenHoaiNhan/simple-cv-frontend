@@ -2,18 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:simple_cv/app/base_widgets/action_button.dart';
 import 'package:simple_cv/app/base_widgets/input_level_form.dart';
 import 'package:simple_cv/app/base_widgets/input_text_form.dart';
-import 'package:simple_cv/models/cv_generator/skill.dart';
-import '../../config/app_color.dart';
+import '../../config/ui_values.dart';
+import '../../data/models/cv_generator/skill_model.dart';
 
 class ItemWithAction extends StatefulWidget {
-  const ItemWithAction({
-    Key? key,
-    required this.itemName,
-    required this.onClickDone,
-    required this.onClickDelete,
-    this.formType = 0,
-    this.formValues
-  }) : super(key: key);
+  const ItemWithAction(
+      {Key? key, required this.itemName, required this.onClickDone, required this.onClickDelete, this.formType = 0, this.formValues})
+      : super(key: key);
 
   final String itemName;
   final Function onClickDone;
@@ -69,7 +64,7 @@ class _ItemWithActionState extends State<ItemWithAction> {
     return widget.formType == 0
         ? InputLevelForm(
             text: 'Level',
-            level: (widget.formValues as Skill).level,
+            level: (widget.formValues as SkillModel).level,
             onClickDelete: () {
               widget.onClickDelete();
               setState(() {

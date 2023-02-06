@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../config/app_color.dart';
+import '../../config/ui_values.dart';
 
 class TextEditor extends StatefulWidget {
   const TextEditor({Key? key, required this.title,}) : super(key: key);

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../config/app_color.dart';
+import '../../config/ui_values.dart';
 
 class LineSpacer extends StatelessWidget {
   const LineSpacer({Key? key}) : super(key: key);

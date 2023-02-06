@@ -4,7 +4,7 @@ import 'package:simple_cv/app/base_widgets/text_editor.dart';
 import 'package:simple_cv/app/base_widgets/text_field.dart';
 import 'package:simple_cv/app/base_widgets/text_field_option.dart';
 
-import '../../config/app_color.dart';
+import '../../config/ui_values.dart';
 import 'action_button.dart';
 
 class InputTextForm extends StatefulWidget {

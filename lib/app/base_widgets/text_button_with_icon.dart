@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../config/app_color.dart';
+import '../../config/ui_values.dart';
 
 class TextButtonWithIcon extends StatefulWidget {
   const TextButtonWithIcon({

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:simple_cv/app/cv_components/left_side_components/activities_section.dart';
-import 'package:simple_cv/app/cv_components/left_side_components/education_section.dart';
-import 'package:simple_cv/app/cv_components/left_side_components/personal_details_section.dart';
-import 'package:simple_cv/app/cv_components/left_side_components/technical_skills_section.dart';
-import 'package:simple_cv/app/cv_components/left_side_components/work_experiences_section.dart';
-import 'package:simple_cv/models/cv_generator/personal_info.dart';
-import 'package:simple_cv/models/cv_generator/skill.dart';
+import 'package:simple_cv/app/cv/cv_components/left_side_components/activities_section.dart';
+import 'package:simple_cv/app/cv/cv_components/left_side_components/education_section.dart';
+import 'package:simple_cv/app/cv/cv_components/left_side_components/personal_details_section.dart';
+import 'package:simple_cv/app/cv/cv_components/left_side_components/technical_skills_section.dart';
+import 'package:simple_cv/app/cv/cv_components/left_side_components/work_experiences_section.dart';
+import '../../../data/models/cv_generator/personal_info_model.dart';
+import '../../../data/models/cv_generator/skill_model.dart';
 
 class LeftSideView extends StatelessWidget {
   const LeftSideView({
@@ -19,7 +19,7 @@ class LeftSideView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final info = PersonalInfo(
+    final info = PersonalInfoModel(
       cvId: 1,
       address: 'Dương Minh Châu',
       avatar: 'https://pbs.twimg.com/profile_images/378800000672688190/11b83214d31bbb05e7e8e19a3ea4aa6a_400x400.jpeg',
@@ -39,11 +39,11 @@ class LeftSideView extends StatelessWidget {
       placeOfBirth: 'Ben Tre',
       postCode: '84000',
     );
-    final technicalSkills = const [
-                Skill(skillId: 1, skillName: 'SQL', level: 9),
-                Skill(skillId: 2, skillName: 'Python', level: 2),
-                Skill(skillId: 3, skillName: '.Net 6', level: 4),
-              ];
+    final technicalSkills = [
+      const SkillModel(skillId: 1, skillName: 'SQL', level: 9),
+      const SkillModel(skillId: 2, skillName: 'Python', level: 2),
+      const SkillModel(skillId: 3, skillName: '.Net 6', level: 4),
+    ];
 
     return Container(
       width: width,
@@ -56,9 +56,9 @@ class LeftSideView extends StatelessWidget {
           children: [
             PersonalDetailsSection(info: info),
             TechnicalSkillsSection(skills: technicalSkills),
-            EducationSection(educations: [1, 2, 4, 5, 6]),
-            WorkExperiencesSections(experiences: [1, 2, 3, 4]),
-            ActivitiesSection(activities: [1, 2, 3, 5]),
+            const EducationSection(educations: [1, 2, 4, 5, 6]),
+            const WorkExperiencesSections(experiences: [1, 2, 3, 4]),
+            const ActivitiesSection(activities: [1, 2, 3, 5]),
           ],
         ),
       ),

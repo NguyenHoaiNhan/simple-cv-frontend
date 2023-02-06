@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:simple_cv/app/base_widgets/action_button.dart';
 
-import '../../config/app_color.dart';
+import '../../config/ui_values.dart';
 
 class TextFieldOption extends StatefulWidget {
   final Map<String, String> options;

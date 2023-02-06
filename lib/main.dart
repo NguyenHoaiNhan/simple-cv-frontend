@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:simple_cv/app/cv/cv_view.dart';
+import 'package:simple_cv/app/login/Screens/login/login.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CVView(),
+      home: LoginScreen(),
     ),
   );
 }
